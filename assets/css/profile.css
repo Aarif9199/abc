@@ -40,11 +40,9 @@ margin-bottom: 20px;
 	display:none;  
   }
   .input-btn{
-	background-color: white;
-	color: #fff;
 	border: 1px solid #8c8c8c;
 	padding: 10px;
-	border-radius: 20px;
+	border-radius: 36%;
 	margin: 15px;
   }
   .input-btn:hover{
@@ -232,4 +230,5 @@ input[type=file] {
     border: 0px;
     background-color: darkgoldenrod;
     font-family: 'customFont';
+	cursor: pointer;
   }

@@ -52,8 +52,9 @@ body {
 }
 
 .login-container .login-form .login-form-inner {
-  max-width: 380px;
+  max-width: 425px;
   width: 95%;
+  font-weight: bolder;
 }
 
 .login-container .login-form .google-login-button .google-icon svg {

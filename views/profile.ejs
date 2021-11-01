@@ -11,7 +11,9 @@
    <div class="main-box">
 
       <input type='file' class='input-file' id="imgInp">
-      <button class='input-btn upload' id='input_btn'><i class="fa fa-camera cam"></i></button>
+      <form method="get" action="/logout" id="frmlogout">
+         <button class='input-btn upload' id='input_btn'><i class="fa fa-arrow-left cam"></i></button>
+      </form>
      <img class="cover" id="blah" src="img/cover.png">
      <div class="dp-container"><img class="dp" src="
          <% if(result.vSGender == 'M') { %>
@@ -37,7 +39,7 @@
      </div>
      <div class="s-main-content" style="width:60%;float:left"> 
       <% if((result.vComp1 == 'Q' || result.vComp2 == 'Q') && result.vQSub == 'N') { %>
-         <form method="post" action="/upload/quran" id="frm" encType="multipart/form-data" style="width:40%;float:left">
+         <form method="post" action="/upload/quran" id="frm" encType="multipart/form-data" style="width:40%;float:left;">
             <div class="current">
                   <ul>
                      <li class="align">
@@ -48,6 +50,11 @@
             </div>
             </form>
          <% } %>
+         <% if((result.vComp1 == 'Q' || result.vComp2 == 'Q') && result.vQSub == 'Y') { %>
+               <div class="dvmsg" style="width:40%;float:left;text-align:center;color:darkslateblue">
+                     <h5> Thank you, We received your Quran Submission</h5>
+               </div>
+         <% } %>   
          <% if((result.vComp1 == 'S' || result.vComp2 == 'S') && result.vSSub == 'N') { %>
             <form method="post" action="/upload/speech" id="frm2" encType="multipart/form-data" style="width:40%;float:left">
                <div class="current">
@@ -60,6 +67,11 @@
                </div>
                </form>
                <% } %>
+               <% if((result.vComp1 == 'S' || result.vComp2 == 'S') && result.vQSub == 'Y') { %>
+                  <div class="dvmsg" style="width:40%;float:left;text-align:center;color:darkslateblue">
+                        <h5> Thank you, We received your Speech Submission</h5>
+                  </div>
+            <% } %> 
          </div>
      </div>
     
