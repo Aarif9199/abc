@@ -1,0 +1,33 @@
+{
+  "name": "almanar_google_drive",
+  "version": "1.0.0",
+  "description": "Almanar Tamil Islamic Center Quran and Speech Competition",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "Almanar",
+    "competition"
+  ],
+  "author": "Aarif Shoaib",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.2",
+    "express-toastr": "^2.0.2",
+    "get-audio-duration": "^3.0.0",
+    "googleapis": "^89.0.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.14",
+    "toastr": "^2.1.4"
+  }
+}

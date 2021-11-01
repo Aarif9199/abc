@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/login.css" rel="stylesheet" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css" rel="stylesheet" >
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.0/js/swiper.min.js" ></script>
+    <script type="text/javascript" src="js/login.js" ></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/css/toastr.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
+    <%- req.toastr.render() %>
+</head>
+<body>
+    <div class="login-container">
+
+        <form class="login-form" method="POST" action="/login/check" id="loginForm">
+          <div class="login-form-inner">
+            <div class="logo"></div>
+            <h1>Login</h1>
+            <p class="body-text">See your growth and get consulting support!</p>
+            <div class="sign-in-seperator">
+              <span>Sign in with Email</span>
+            </div>
+      
+            <div class="login-form-group">
+              <label for="email">Email <span class="required-star">*</span></label>
+              <input type="text" name="email" placeholder="email@website.com" id="email" required />
+            </div>
+            <div class="login-form-group">
+              <label for="pwd">Password <span class="required-star">*</span></label>
+              <input autocomplete="off" name="pwd" type="text" placeholder="Minimum 8 characters" id="pwd" required/>
+            </div>
+      
+            <div class="login-form-group single-row">
+              <div class="custom-check">
+                <input autocomplete="off" type="checkbox" checked id="remember"><label for="remember">Remember me</label>
+              </div>
+      
+              <a href="#" class="link forgot-link">Forgot Password ?</a>
+            </div>
+            <div class="">
+                <button type="submit" class="rounded-button login-cta">Login</button>
+            </div>
+            <div class="register-div">Not registered yet? <a href="#" class="link create-account" -link>Create an account ?</a></div>
+          </div>
+      
+        </form>
+
+
+        <div class="onboarding">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide color-1">
+                <div class="slide-image">
+                  <img src="https://raw.githubusercontent.com/ismailvtl/ismailvtl.github.io/master/images/startup-launch.png" loading="lazy" alt="" />
+                </div>
+                <div class="slide-content">
+                  <h2>Turn your ideas into reality.</h2>
+                  <p>Consistent quality and eperience across all platform and devices</p>
+                </div>
+              </div>
+              <div class="swiper-slide color-1">
+                <div class="slide-image">
+                  <img src="https://raw.githubusercontent.com/ismailvtl/ismailvtl.github.io/master/images/cloud-storage.png" loading="lazy" alt="" />
+                </div>
+                <div class="slide-content">
+                  <h2>Turn your ideas into reality.</h2>
+                  <p>Consistent quality and eperience across all platform and devices</p>
+                </div>
+              </div>
+      
+              <div class="swiper-slide color-1">
+                <div class="slide-image">
+                  <img src="https://raw.githubusercontent.com/ismailvtl/ismailvtl.github.io/master/images/cloud-storage.png" loading="lazy" alt="" />
+                </div>
+                <div class="slide-content">
+                  <h2>Turn your ideas into reality.</h2>
+                  <p>Consistent quality and eperience across all platform and devices</p>
+                </div>
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

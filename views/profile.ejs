@@ -1,0 +1,69 @@
+<!DOCTYPE HTML><html lang="en">
+<head>	
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">	
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>Participant Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/profile.css"></head>
+<body>
+   <div class="main-box">
+
+      <input type='file' class='input-file' id="imgInp">
+      <button class='input-btn upload' id='input_btn'><i class="fa fa-camera cam"></i></button>
+     <img class="cover" id="blah" src="img/cover.png">
+     <div class="dp-container"><img class="dp" src="
+         <% if(result.vSGender == 'M') { %>
+            img/male.png
+            <%} else { %>
+               img/female.jpg
+            <% } %>   
+      "></div>
+    
+     <div class="box" style="width:100%">
+     <div class="main-content" style="width:40%;float:left"> 
+        <h3><b><%= result.vSName %></b> (<%= result.vSGender %>)</h3>
+        <h4><%= result.vSAge %> years</h4>
+        <h4 class="lnheight">C/O  <%= result.vContName %> @ <%= result.vContEmail %></h4>        
+        <div class="content">
+          <h4><%= result.vCcity %>, <%= result.vCcountry %>, <%= result.vContMobile %></h4> 
+            <ul class="content">
+               <li><span></span></li>
+            </ul>
+         </div>
+         <h4></h4>
+         <h5> Registered On <%= result.vTrandate %></h5>
+     </div>
+     <div class="s-main-content" style="width:60%;float:left"> 
+      <% if((result.vComp1 == 'Q' || result.vComp2 == 'Q') && result.vQSub == 'N') { %>
+         <form method="post" action="/upload/quran" id="frm" encType="multipart/form-data" style="width:40%;float:left">
+            <div class="current">
+                  <ul>
+                     <li class="align">
+                     <input name="uploadQ" type="file" id="uploadQ" class="form-control" />
+                     <button type="submit" id="btnQUpload" class="form-control">Upload</button></li>
+                     <li class="align"</li>
+                  </ul>
+            </div>
+            </form>
+         <% } %>
+         <% if((result.vComp1 == 'S' || result.vComp2 == 'S') && result.vSSub == 'N') { %>
+            <form method="post" action="/upload/speech" id="frm2" encType="multipart/form-data" style="width:40%;float:left">
+               <div class="current">
+                     <ul>
+                        <li class="align">
+                        <input name="uploadS" type="file" id="uploadS" class="form-control" />
+                        <button type="submit" id="btnSUpload" class="form-control">Upload</button></li>
+                        <li class="align"</li>
+                     </ul>
+               </div>
+               </form>
+               <% } %>
+         </div>
+     </div>
+    
+   </div>
+</body>
+   
+</html>
